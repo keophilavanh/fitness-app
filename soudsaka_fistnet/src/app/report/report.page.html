@@ -60,8 +60,9 @@
         </tr>
         <tr>
           <td colspan="2"  style="text-align: center;">
-              <p *ngIf="report == 1" > ລາຍຮັບ </p>
-              <p *ngIf="report == 2" > ການຂາຍ </p>
+              <p *ngIf="report == 1" > ສະມາຊິກມາໃຊ້ບໍລິການ </p>
+              <p *ngIf="report == 2" > ສະມັກສະມາຊິກ </p>
+              <p *ngIf="report == 3" > ສະມາຊິກຫມົດກຳນົດ </p>
           </td>
         </tr>
         <tr>
@@ -75,16 +76,11 @@
           <td colspan="2"><p> -----------------------------------</p></td>
         </tr>
         <tr>
-          <td colspan="2" *ngIf="report == 1">
-                          <p >
-                              ຈຳນວນໃບບິນ : <strong> {{ data?.length | number }}</strong> ໃບບິນ <br> 
-                              ມູນຄ່າ : <strong> {{ count_total() | number }}</strong> ກີບ
-                         </p>
-          </td>
-          <td colspan="2" *ngIf="report == 2">
-            <p  *ngFor="let item of data" >
-                <strong> {{ item?.f_name }}</strong> <br> 
-                <strong> {{ item?.qty }} X {{ item?.price | number }} = {{ item?.total | number}} ກີບ </strong>  
+        
+          <td colspan="2" >
+           
+            <p  *ngFor="let item of data; let i = index" >
+              {{(i+1)}}  ຊື່ສະມາຊິກ : <strong>  {{ item?.membername }}</strong> 
                
            </p>
 </td>
@@ -92,10 +88,11 @@
         <tr>
           <td colspan="2">
             <p> -----------------------------------</p>
-            <p *ngIf="report == 2" >
+            <p >
+              ຈຳນວນຄົນ : <strong> {{ data?.length | number }}</strong> ຄົນ <br> 
               
-              ມູນຄ່າ : <strong> {{ count_total() | number }}</strong> ກີບ
          </p>
+          
           </td>
         </tr>
        

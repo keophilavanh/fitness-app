@@ -20,11 +20,14 @@ ion-header {
 
 .login_logo {
     margin-top: 20px;
+
 }
 
 .container {
     .img_logo img {
         width: 100px;
+      
+        border-radius: 50%;
     }
     .name_app {
         display: flex;

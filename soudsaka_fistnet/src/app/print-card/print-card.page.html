@@ -1,0 +1,72 @@
+
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+      <ion-grid>
+          <ion-row>
+              <ion-col class="back"  >
+                <div (click)="dismiss()">
+                  ກັບຄືນ
+                </div>
+              </ion-col>
+              <ion-col class="search-icon">
+                  <div>
+                    <ion-icon name="print" (click)="print_to_driver()"  ></ion-icon>
+                    
+                  </div>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="printer" class="bg_color">
+	 
+  <style>
+    table {
+     
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+     th {
+     
+      text-align: left;
+      padding: 8px;
+    }
+
+   
+    </style>
+	<ion-card>
+    <div>
+      <table>
+       
+        <tr>
+          
+          <td colspan="2" style="text-align: center;"> <h2>ບັດສະມາຊິກ</h2></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center;"> <p> ຊື່ສະມາຊິກ : {{item.membername}} <br> ເບີໂທ : {{item.phonenumber}}</p></td>
+        </tr>
+        
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            
+            <ngx-qrcode 
+                  [elementType]="elementType" 
+                  [value] = "value"
+                 >
+            </ngx-qrcode>
+           
+        
+          </td>
+        </tr>
+       
+      </table>
+    </div>
+	
+	
+	</ion-card>
+</ion-content>
+

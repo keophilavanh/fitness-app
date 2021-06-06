@@ -20,18 +20,22 @@ export class AccountPage implements OnInit {
 this.route.navigate(['/login'])
   }
 
-  user_manage() {
-    this.route.navigate(['./user-manage']);
+  manage() {
+    this.route.navigate(['./manage']);
   } 
   
   
-  product_manage() {
-    this.route.navigate(['./product-manage']);
+  report_select() {
+    this.route.navigate(['./tabs/Report-select']);
   } 
 
+  service(){
+    this.route.navigate(['./tabs/inout']);
+  }
 
-  table_manage() {
-    this.route.navigate(['./table-manage']);
+
+  menber() {
+    this.route.navigate(['./menber-manage']);
   } 
 
   category_manage() {

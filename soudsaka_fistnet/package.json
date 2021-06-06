@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~10.0.0",
     "@angular/router": "~10.0.0",
     "@capacitor/core": "2.4.3",
+    "@ionic-native/barcode-scanner": "^5.33.1",
     "@ionic-native/bluetooth-serial": "^5.32.1",
     "@ionic-native/core": "^5.0.0",
     "@ionic-native/document-viewer": "^5.30.0",
@@ -39,6 +40,7 @@
     "cordova-plugin-printer": "^0.8.0",
     "html-to-image": "^1.6.0",
     "ng2-pdf-viewer": "^6.3.2",
+    "ngx-qrcode2": "^9.0.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
@@ -77,6 +79,7 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~3.3.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "phonegap-plugin-barcodescanner": "^8.1.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
@@ -106,7 +109,10 @@
       "cordova-plugin-printer": {
         "ANDROID_SUPPORT_V4_VERSION": "28.+"
       },
-      "cordova-plugin-bluetooth-serial": {}
+      "cordova-plugin-bluetooth-serial": {},
+      "phonegap-plugin-barcodescanner": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      }
     },
     "platforms": [
       "android"

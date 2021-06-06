@@ -1,0 +1,101 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+      <ion-grid>
+          <ion-row>
+            <ion-col class="back"  >
+              <div (click)="dismiss()">
+                ກັບຄືນ
+              </div>
+            </ion-col>
+
+            <ion-col class="search-icon">
+              <div>
+                <ion-icon name="print"   ></ion-icon>
+              
+                  <!-- <ion-icon name="search" (click)="show_Serach_Input()"></ion-icon> -->
+              </div>
+          </ion-col>
+             
+          </ion-row>
+      </ion-grid>
+
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+		<ion-row class=" ion-text-center">
+			<ion-col >
+				<h1 class="font"> ຂໍ້ມູນສະມາຊີກ </h1>
+			</ion-col>
+			
+		</ion-row>
+		<ion-row class=" ion-text-center">
+
+			<ion-col size="12" >
+				<ion-item>
+					<ion-label mode="md" position="floating"> ຊື້ສະມາຊີກ </ion-label>
+					<ion-input mode="md" type="text" [value]="membername"  (keyup)="keymembername($event)" ></ion-input>
+				</ion-item>
+			</ion-col>
+
+    
+      <ion-col size="12" >
+				<ion-item>
+					<ion-label mode="md" position="floating"> ເບີໂທ</ion-label>
+					<ion-input mode="md" type="number" [value]="phonenumber"  (keyup)="keyphonenumber($event)" ></ion-input>
+				</ion-item>
+			</ion-col>
+
+      <ion-col size="12" >
+			
+				<ion-item>
+				  <ion-label>ແພັກເກັດ</ion-label>
+				  <ion-select [(ngModel)]="packageid"  >
+					<ion-select-option *ngFor="let item of packagelist" [value]="item.packageid">{{item.packagename}}</ion-select-option>
+					
+				  </ion-select>
+				</ion-item>
+		</ion-col>
+
+    <ion-col size="12" >
+      <ion-item>
+        <ion-label mode="md" position="floating"> ວັນທີໝົດອາຍຸ</ion-label><br>
+        
+        <ion-input mode="md" type="date"  [(ngModel)]="endpackage"  ></ion-input>
+      </ion-item>
+    </ion-col>
+
+      <ion-col size="12" >
+				<ion-item>
+					<!-- <ion-label mode="md" position="floating"> ຮູບພາບ</ion-label> -->
+          <ion-input mode="md" type="file" (change)="changeFileListener($event)"   ></ion-input>
+				</ion-item>
+			</ion-col>
+
+      <ion-col size="12" >
+        <img *ngIf="image" [src]="image?.img" height="150px" alt="" srcset="">
+        <img *ngIf="!image" [src]="part + item?.image" height="150px" alt="" srcset="">
+			</ion-col>
+			
+    </ion-row>
+    
+	</ion-card>
+
+ 
+ 
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-row >
+    <ion-col size="6" >
+      <ion-button col-12 size="large" shape="full" class="btn" (click)="save()" > ແກ້ໄຂ </ion-button>
+    </ion-col>
+    <ion-col size="6" >
+      <ion-button col-12 size="large" shape="full" class="btn" (click)="remove()" > ລົບ </ion-button>
+    </ion-col>
+  
+  </ion-row>
+  </ion-footer>

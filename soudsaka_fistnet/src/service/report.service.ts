@@ -11,19 +11,19 @@ export class ReportService  extends APIService {
 
 
 
-  user_report_by_date(param:any):Observable<any> {
-    const header = this.headerBase('report_ticket_myself');
+  reportservice(param:any):Observable<any> {
+    const header = this.headerBase('reportservice');
     return this.http.post(this.url + 'report.api.php', param,{headers:header});
   }
 
 
-  report_ordder(param:any):Observable<any> {
-    const header = this.headerBase('reportReceives');
+  reportmemberstart(param:any):Observable<any> {
+    const header = this.headerBase('reportmemberstart');
     return this.http.post(this.url + 'report.api.php', param,{headers:header});
   }
 
-  report_order_detell(param:any):Observable<any> {
-    const header = this.headerBase('reportOrder');
+  reportmemberend(param:any):Observable<any> {
+    const header = this.headerBase('reportmemberend');
     return this.http.post(this.url + 'report.api.php', param,{headers:header});
   }
 

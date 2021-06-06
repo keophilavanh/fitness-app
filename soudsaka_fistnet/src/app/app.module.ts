@@ -27,6 +27,8 @@ import { Printer } from '@ionic-native/printer/ngx';
 
 import {PrinterService} from './../printer_bluetoothserial/printer.service';
 import {ProductService} from "src/service/product.service"
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 @NgModule({
   declarations: [AppComponent ],
@@ -41,8 +43,8 @@ import {ProductService} from "src/service/product.service"
     FileTransfer,
     PreviewAnyFile,
     PdfViewerModule,
- 
-
+    BarcodeScanner,
+    NgxQRCodeModule,
    //services
    APIService,
     Downloader,

@@ -120,7 +120,43 @@ const routes: Routes = [
   {
     path: 'user-info',
     loadChildren: () => import('./user-info/user-info.module').then( m => m.UserInfoPageModule)
+  },  {
+    path: 'manage',
+    loadChildren: () => import('./manage/manage.module').then( m => m.ManagePageModule)
   },
+  {
+    path: 'packet-manage',
+    loadChildren: () => import('./packet-manage/packet-manage.module').then( m => m.PacketManagePageModule)
+  },
+  {
+    path: 'packet-add',
+    loadChildren: () => import('./packet-add/packet-add.module').then( m => m.PacketAddPageModule)
+  },
+  {
+    path: 'packet-info',
+    loadChildren: () => import('./packet-info/packet-info.module').then( m => m.PacketInfoPageModule)
+  },
+  {
+    path: 'menber-manage',
+    loadChildren: () => import('./menber-manage/menber-manage.module').then( m => m.MenberManagePageModule)
+  },
+  {
+    path: 'menber-add',
+    loadChildren: () => import('./menber-add/menber-add.module').then( m => m.MenberAddPageModule)
+  },
+  {
+    path: 'menber-update',
+    loadChildren: () => import('./menber-update/menber-update.module').then( m => m.MenberUpdatePageModule)
+  },
+  {
+    path: 'inout',
+    loadChildren: () => import('./inout/inout.module').then( m => m.InoutPageModule)
+  },
+  {
+    path: 'print-card',
+    loadChildren: () => import('./print-card/print-card.module').then( m => m.PrintCardPageModule)
+  },
+
 
 
 

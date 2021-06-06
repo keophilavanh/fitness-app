@@ -34,18 +34,18 @@ export class ReportSelectPage implements OnInit {
     }
 
     if(this.report == 1){
-      this.report_order()
+      this.reportservice()
     }else if(this.report == 2){
-      this.report_order_detell()
-    }else{
-
+      this.reportmemberstart()
+    }else if(this.report == 3){
+      this.reportmemberend()
     }
    
     
   }
 
 
-  async report_order(){
+  async reportservice(){
    
     const Data = {
       first_date: this.date_start.split('T')[0],
@@ -62,7 +62,7 @@ export class ReportSelectPage implements OnInit {
     loader.present();
     
     
-    this.reportService.report_ordder(Data).subscribe(
+    this.reportService.reportservice(Data).subscribe(
       res=>{
         console.log(res);
         this.view_report(res)
@@ -76,7 +76,7 @@ export class ReportSelectPage implements OnInit {
     
   }
 
-  async report_order_detell(){
+  async reportmemberstart(){
    
     const Data = {
       first_date: this.date_start.split('T')[0],
@@ -93,7 +93,38 @@ export class ReportSelectPage implements OnInit {
     loader.present();
     
     
-    this.reportService.report_order_detell(Data).subscribe(
+    this.reportService.reportmemberstart(Data).subscribe(
+      res=>{
+        console.log(res);
+        this.view_report(res)
+        loader.dismiss();
+      },
+      err=>{
+        console.log(err);
+        loader.dismiss();
+      }
+    )
+    
+  }
+
+  async reportmemberend(){
+   
+    const Data = {
+      first_date: this.date_start.split('T')[0],
+      last_date: this.date_end.split('T')[0]
+    }
+    console.log(Data);
+
+ 
+
+    const loader = await this.loadingCtrl.create({
+      message: 'Please wait...',
+     
+    });
+    loader.present();
+    
+    
+    this.reportService.reportmemberend(Data).subscribe(
       res=>{
         console.log(res);
         this.view_report(res)

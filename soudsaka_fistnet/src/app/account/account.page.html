@@ -13,14 +13,14 @@
     <section class="login_logo">
         <div class="container">
             <div class="img_logo ion-text-center">
-                <img src="../../assets/imgs/logo.png" alt="" />
+                <img src="../../assets/imgs/logo_f.jpeg" alt="" />
             </div>
             <div class="name_app">
                 <h4 class="ion-text-center">&nbsp; &nbsp; {{username}} &nbsp;</h4>
             </div>
             <div class="buton ion-text-center">
                
-                <ion-button class="btn_register" shape="round" color="danger" fill="outline" (click)="isLogout()">ອອກຈາກລະບົບ</ion-button>
+                <ion-button class="btn_register" shape="round" color="tab" fill="outline" (click)="isLogout()">ອອກຈາກລະບົບ</ion-button>
             </div>
         </div>
     </section>
@@ -29,13 +29,26 @@
 
             <ion-row>
                 <div class="menu">
-                    <ion-card class="menu-card ion-no-margin" (click)="product_manage()">
+                    <ion-card class="menu-card ion-no-margin" (click)="service()">
                         <ion-card-content>
                            
                             <!-- <ion-icon name="pricetag-sharp" color="primary"></ion-icon>  -->
-                            <ion-icon name="people-sharp" color="primary"></ion-icon> 
+                            <ion-icon name="person-sharp" color="tab"></ion-icon>
                             <br>
                            
+
+                            <ion-label>
+                                ບໍລິການ
+                            </ion-label>
+                        </ion-card-content>
+                    </ion-card>
+                </div>
+                <div class="menu">
+                    <ion-card class="menu-card ion-no-margin" (click)="menber()">
+                        <ion-card-content>
+                            
+                           
+                            <ion-icon name="people-sharp" color="tab"></ion-icon> <br>
 
                             <ion-label>
                                 ສະມາຊິກ
@@ -43,26 +56,13 @@
                         </ion-card-content>
                     </ion-card>
                 </div>
-                <div class="menu">
-                    <ion-card class="menu-card ion-no-margin" (click)="table_manage()">
-                        <ion-card-content>
-                            
-                            <ion-icon name="person-sharp" color="primary"></ion-icon><br>
-                            
-
-                            <ion-label>
-                                ລູກຄ້າທົ່ວໄປ
-                            </ion-label>
-                        </ion-card-content>
-                    </ion-card>
-                </div>
             </ion-row>
             <ion-row>
                 <div class="menu">
-                    <ion-card class="menu-card ion-no-margin" (click)="category_manage()">
+                    <ion-card class="menu-card ion-no-margin" (click)="manage()">
                         <ion-card-content>
                          
-                            <ion-icon name="list-circle-sharp"  color="primary"></ion-icon> <br>
+                            <ion-icon name="list-circle-sharp"  color="tab"></ion-icon> <br>
                             <!-- <ion-icon name="close-circle" color="primary"></ion-icon> <br> -->
                            
                             <ion-label>
@@ -73,10 +73,10 @@
                 </div>
 
                 <div class="menu">
-                    <ion-card class="menu-card ion-no-margin" (click)="user_manage()" >
+                    <ion-card class="menu-card ion-no-margin" (click)="report_select()" >
                         <ion-card-content>
                             <!-- <ion-icon name="person-sharp"></ion-icon> -->
-                            <ion-icon name="document-sharp"  color="primary"></ion-icon>
+                            <ion-icon name="document-sharp"  color="tab"></ion-icon>
                             <br>
                             <ion-label>
                                 ລາຍງານ

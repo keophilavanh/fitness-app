@@ -78,7 +78,7 @@ export class UserManagePage implements OnInit {
 
   close(){
 
-    this.route.navigate(['/tabs/account'])
+    this.route.navigate(['/manage'])
   }
 
   async loadTable(){

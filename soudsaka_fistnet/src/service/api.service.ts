@@ -14,8 +14,16 @@ export class APIService {
   protected getBaseUrl(): string {
    
   
+     return 'http://216.127.173.163/FitnessAPI/api/';
+    //  return 'http://192.168.1.10/fitness/api/';
+  
+  }
+
+  public imageURL(): string {
+   
+  
     // return 'http://localhost/soudsaka/api/';
-      return 'http://192.168.10.105/fitness/api/';
+      return 'http://216.127.173.163/FitnessAPI/image/';
   
   }
 

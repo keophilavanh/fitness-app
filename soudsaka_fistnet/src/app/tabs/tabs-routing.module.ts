@@ -35,6 +35,10 @@ const routes: Routes = [
         loadChildren: () => import('../table/table.module').then(m => m.TablePageModule)
       },
       {
+        path: 'inout',
+        loadChildren: () => import('../inout/inout.module').then(m => m.InoutPageModule)
+      },
+      {
         path: 'product',
         loadChildren: () => import('../product-manage/product-manage.module').then(m => m.ProductManagePageModule)
       },
