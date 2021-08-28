@@ -7,12 +7,14 @@ import { Router } from '@angular/router';
 })
 export class AccountPage implements OnInit {
   public username :string;
+  public role:string;
   constructor(
     private route:Router
   ) { }
 
   ngOnInit() {
     this.username = localStorage.getItem('username')
+    this.role = localStorage.getItem("role");
   }
 
   isLogout(){

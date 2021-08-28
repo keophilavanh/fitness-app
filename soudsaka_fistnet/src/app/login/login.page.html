@@ -14,7 +14,7 @@
 
         </div>
         <div class="name_app">
-            <h4 class="ion-text-center">&nbsp; &nbsp; ຮ້ານ Fitness &nbsp;</h4>
+            <h4 class="ion-text-center">&nbsp; &nbsp; ໂປຣແກຣມ ຄຸ້ມຄອງລູກຄ້າ ຮ້ານຟິດເນັດສ໌ &nbsp;</h4>
         </div>
     </div>
     <div class="container_from">
@@ -22,24 +22,25 @@
             <ion-item>
                 <ion-label>
                     <ion-icon color="medium" name="person-sharp"></ion-icon>
-                  
+
                 </ion-label>
-                <ion-input type="text" placeholder="ຊື່ຜູ້ໃຊ້" (keyup)="keyupGetusername($event)" ></ion-input>
+                <ion-input type="text" placeholder="ຊື່ຜູ້ໃຊ້" (keyup)="keyupGetusername($event)"></ion-input>
             </ion-item>
 
             <ion-item>
                 <ion-label>
                     <ion-icon color="medium" name="lock-open-sharp"></ion-icon>
                 </ion-label>
-                <ion-input type="password" placeholder="ລະຫັດຜ່ານ" (keyup)="keyupGetpassword($event)" (keyup.enter)="onLogin()" > </ion-input>
+                <ion-input type="password" placeholder="ລະຫັດຜ່ານ" (keyup)="keyupGetpassword($event)"
+                    (keyup.enter)="onLogin()"> </ion-input>
                 <!-- <h4 slot="end">ລືມລະຫັດ</h4> -->
 
             </ion-item>
         </ion-list>
 
         <div padding class="btn_submit">
-            <ion-button  color="primary" expand="block"  (click)="onLogin()"> ເຂົ້າສູ່ລະບົບ </ion-button>
-           
+            <ion-button color="primary" expand="block" (click)="onLogin()"> ເຂົ້າສູ່ລະບົບ </ion-button>
+
         </div>
     </div>
 

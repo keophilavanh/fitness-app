@@ -1,89 +1,90 @@
 <ion-header [translucent]="true" class="ion-no-border">
-  <ion-toolbar>
-      <ion-grid>
-          <ion-row>
-            <ion-col class="back"  >
-              <div (click)="dismiss()">
-                ກັບຄືນ
-              </div>
-            </ion-col>
-             
-          </ion-row>
-      </ion-grid>
+	<ion-toolbar>
+		<ion-grid>
+			<ion-row>
+				<ion-col class="back">
+					<div (click)="dismiss()">
+						ກັບຄືນ
+					</div>
+				</ion-col>
 
-    
-  </ion-toolbar>
+			</ion-row>
+		</ion-grid>
+
+
+	</ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
-  <ion-card>
+	<ion-card>
 		<ion-row class=" ion-text-center">
-			<ion-col >
-				<h1 class="font"> ເພີ້ມສະມາຊີກ </h1>
+			<ion-col>
+				<h1 class="font"> ເພີ່ມສະມາຊິກ </h1>
 			</ion-col>
-			
+
 		</ion-row>
 		<ion-row class=" ion-text-center">
 
-			<ion-col size="12" >
+			<ion-col size="12">
 				<ion-item>
-					<ion-label mode="md" position="floating"> ຊື້ສະມາຊີກ </ion-label>
-					<ion-input mode="md" type="text"  (keyup)="keymembername($event)" ></ion-input>
+					<ion-label mode="md" position="floating"> ຊື່ສະມາຊິກ </ion-label>
+					<ion-input mode="md" type="text" (keyup)="keymembername($event)"></ion-input>
 				</ion-item>
 			</ion-col>
 
-    
-      <ion-col size="12" >
+
+			<ion-col size="12">
 				<ion-item>
 					<ion-label mode="md" position="floating"> ເບີໂທ</ion-label>
-					<ion-input mode="md" type="number"  (keyup)="keyphonenumber($event)" ></ion-input>
+					<ion-input mode="md" type="number" (keyup)="keyphonenumber($event)"></ion-input>
 				</ion-item>
 			</ion-col>
 
-      <ion-col size="12" >
-			
+			<ion-col size="12">
+
 				<ion-item>
-				  <ion-label>ແພັກເກັດ</ion-label>
-				  <ion-select [(ngModel)]="packageid"  >
-					<ion-select-option *ngFor="let item of packagelist" [value]="item.packageid">{{item.packagename}}</ion-select-option>
-					
-				  </ion-select>
+					<ion-label>ແພັກເກັດ</ion-label>
+					<ion-select [(ngModel)]="packageid">
+						<ion-select-option *ngFor="let item of packagelist" [value]="item.packageid">
+							{{item.packagename}}</ion-select-option>
+
+					</ion-select>
 				</ion-item>
-		</ion-col>
+			</ion-col>
 
-    <ion-col size="12" >
-      <ion-item>
-        <ion-label mode="md" position="floating"> ວັນທີໝົດອາຍຸ</ion-label><br>
-        
-        <ion-input mode="md" type="date"  [(ngModel)]="endpackage"  ></ion-input>
-      </ion-item>
-    </ion-col>
+			<ion-col size="12">
+				<ion-item>
+					<ion-label mode="md" position="floating"> ວັນທີໝົດອາຍຸ</ion-label><br>
 
-      <ion-col size="12" >
+					<ion-input mode="md" type="date" [(ngModel)]="endpackage"></ion-input>
+				</ion-item>
+			</ion-col>
+
+			<ion-col size="12">
 				<ion-item>
 					<!-- <ion-label mode="md" position="floating"> ຮູບພາບ</ion-label> -->
-          <ion-input mode="md" type="file" (change)="changeFileListener($event)"   ></ion-input>
+					<ion-input mode="md" type="file" (change)="changeFileListener($event)"></ion-input>
 				</ion-item>
 			</ion-col>
 
-      <ion-col size="12" >
-        <img *ngIf="image" [src]="image?.img" height="150px" alt="" srcset="">
+			<ion-col size="12">
+				<img *ngIf="image" [src]="image?.img" height="150px" alt="" srcset="">
 			</ion-col>
-			
-    </ion-row>
-    
+
+		</ion-row>
+
 	</ion-card>
 
- 
- 
+
+
 </ion-content>
 
 <ion-footer class="ion-no-border">
-	<ion-row >
-		<ion-col size="12" >
-			<ion-button col-12 size="large" shape="full" class="btn" (click)="save()" > ບັນທືກ </ion-button>
+	<ion-row>
+		<ion-col size="12">
+			<ion-button col-12 size="large" shape="full" class="btn" (click)="save()"> ບັນທືກ </ion-button>
 		</ion-col>
-	
+
 	</ion-row>
 </ion-footer>

@@ -31,16 +31,20 @@
    
     <div class="item_inner">
      
-      <h3 class="d-flex two" (click)="info(item)">
+      <h3 class="d-flex two" >
         
-          <span class="item_title"> {{item.membername}} </span>
-          <span class="end">{{item.packagename }} </span>
+          <span class="item_title" (click)="info(item)" > {{item.membername}} </span>
+          <span class="end" (click)="renew(item)" > <ion-icon name="calendar"></ion-icon> </span>
         
       </h3>
+      <p class="d-flex two" (click)="info(item)">
+        <span class="text-ellipsis" > ແພກເກັດ : {{item.packagename }} </span>
+        <span class="end"  > ໝົດກຳນົດ : {{item.endpackage}} </span>
+      </p>
       <p class="d-flex two">
-        <span class="text-ellipsis" (click)="info(item)">ໝົດກຳນົດ : {{item.endpackage}}</span>
-        <span class="end" ><ion-icon  (click)="print(item)"   name="print"   ></ion-icon></span>
-        
+        <span class="text-ellipsis"> <ion-icon name="card"  (click)="print(item)"></ion-icon> </span>
+       
+        <span class="end" >  <ion-icon  (click)="print_invoice(item)"   name="print"   ></ion-icon></span>
       </p>
    
      

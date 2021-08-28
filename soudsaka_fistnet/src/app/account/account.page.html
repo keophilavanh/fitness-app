@@ -24,11 +24,11 @@
             </div>
         </div>
     </section>
-    <section class="container_list_menu ion-text-center">
+    <section class="container_list_menu ion-text-center" *ngIf="role == 'admin'">
         <div class="wappper_center_with_hight">
 
             <ion-row>
-                <div class="menu">
+                <div class="menu" >
                     <ion-card class="menu-card ion-no-margin" (click)="service()">
                         <ion-card-content>
                            

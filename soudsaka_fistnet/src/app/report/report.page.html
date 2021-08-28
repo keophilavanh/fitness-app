@@ -80,7 +80,10 @@
           <td colspan="2" >
            
             <p  *ngFor="let item of data; let i = index" >
-              {{(i+1)}}  ຊື່ສະມາຊິກ : <strong>  {{ item?.membername }}</strong> 
+              {{(i+1)}}  ຊື່ສະມາຊິກ : <strong>  {{ item?.membername }} </strong> <br>
+
+              ແພກເກັດ {{item?.packagename}} <br>
+              <strong *ngIf="item.price"> ລາຄາ : {{ item?.price  | number}} </strong>
                
            </p>
 </td>

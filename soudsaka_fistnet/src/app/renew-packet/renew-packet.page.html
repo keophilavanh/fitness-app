@@ -28,26 +28,26 @@
   <ion-card>
     <ion-row class=" ion-text-center">
       <ion-col>
-        <h1 class="font"> ຂໍ້ມູນສະມາຊິກ </h1>
+        <h1 class="font"> ຕໍ່ບັດສະມາຊິກ </h1>
       </ion-col>
 
     </ion-row>
     <ion-row class=" ion-text-center">
 
-      <ion-col size="12">
+      <!-- <ion-col size="12">
         <ion-item>
           <ion-label mode="md" position="floating"> ຊື່ສະມາຊີກ </ion-label>
           <ion-input mode="md" type="text" [value]="membername" (keyup)="keymembername($event)"></ion-input>
         </ion-item>
-      </ion-col>
+      </ion-col> -->
 
-
+<!-- 
       <ion-col size="12">
         <ion-item>
           <ion-label mode="md" position="floating"> ເບີໂທ</ion-label>
           <ion-input mode="md" type="number" [value]="phonenumber" (keyup)="keyphonenumber($event)"></ion-input>
         </ion-item>
-      </ion-col>
+      </ion-col> -->
 
       <ion-col size="12">
 
@@ -69,17 +69,17 @@
         </ion-item>
       </ion-col>
 
-      <ion-col size="12">
+      <!-- <ion-col size="12">
         <ion-item>
-          <!-- <ion-label mode="md" position="floating"> ຮູບພາບ</ion-label> -->
+          <ion-label mode="md" position="floating"> ຮູບພາບ</ion-label> 
           <ion-input mode="md" type="file" (change)="changeFileListener($event)"></ion-input>
         </ion-item>
-      </ion-col>
+      </ion-col> -->
 
-      <ion-col size="12">
+      <!-- <ion-col size="12">
         <img *ngIf="image" [src]="image?.img" height="150px" alt="" srcset="">
         <img *ngIf="!image" [src]="part + item?.image" height="150px" alt="" srcset="">
-      </ion-col>
+      </ion-col> -->
 
     </ion-row>
 
@@ -91,12 +91,9 @@
 
 <ion-footer class="ion-no-border">
   <ion-row>
-    <ion-col size="6">
-      <ion-button col-12 size="large" shape="full" class="btn" (click)="save()"> ແກ້ໄຂ </ion-button>
+    <ion-col size="12">
+      <ion-button col-12 size="large" shape="full" class="btn" (click)="save()"> ຕໍ່ບັດສະມາຊິກ </ion-button>
     </ion-col>
-    <ion-col size="6">
-      <ion-button col-12 size="large" shape="full" class="btn" (click)="remove()"> ລົບ </ion-button>
-    </ion-col>
-
+   
   </ion-row>
 </ion-footer>

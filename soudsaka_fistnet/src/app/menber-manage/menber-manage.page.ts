@@ -6,6 +6,8 @@ import { MenberAddPage } from '../menber-add/menber-add.page';
 import { MenberUpdatePage } from '../menber-update/menber-update.page';
 import { MemberService } from "src/service/member.service"
 import {PrintCardPage} from "../print-card/print-card.page"
+import { PrintInvoicePage } from "../print-invoice/print-invoice.page";
+import { RenewPacketPage } from "../renew-packet/renew-packet.page";
 
 @Component({
   selector: 'app-menber-manage',
@@ -155,6 +157,59 @@ async  doInfinite(event) {
   async print(item:any) {
     const modal = await this.modalController.create({
       component: PrintCardPage,
+      cssClass: 'my-custom-class',
+      componentProps: {
+        'item': item,
+        'status': 0
+       
+      }
+    });
+
+    modal.onDidDismiss().then(
+      res=>{
+        if(res.data.reload){
+          this.page = 1
+          this.limit = 10
+          this.load();
+        }
+        
+      }
+    )
+    
+    return await modal.present();
+  }
+
+
+
+  async print_invoice(item:any) {
+    const modal = await this.modalController.create({
+      component: PrintInvoicePage,
+      cssClass: 'my-custom-class',
+      componentProps: {
+        'item': item,
+        'status': 0
+       
+      }
+    });
+
+    modal.onDidDismiss().then(
+      res=>{
+        if(res.data.reload){
+          this.page = 1
+          this.limit = 10
+          this.load();
+        }
+        
+      }
+    )
+    
+    return await modal.present();
+  }
+
+
+  async renew(item:any) {
+    const modal = await this.modalController.create({
+      component: RenewPacketPage,
       cssClass: 'my-custom-class',
       componentProps: {
         'item': item,

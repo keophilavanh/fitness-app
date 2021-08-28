@@ -156,6 +156,14 @@ const routes: Routes = [
     path: 'print-card',
     loadChildren: () => import('./print-card/print-card.module').then( m => m.PrintCardPageModule)
   },
+  {
+    path: 'print-invoice',
+    loadChildren: () => import('./print-invoice/print-invoice.module').then( m => m.PrintInvoicePageModule)
+  },
+  {
+    path: 'renew-packet',
+    loadChildren: () => import('./renew-packet/renew-packet.module').then( m => m.RenewPacketPageModule)
+  },
 
 
 
